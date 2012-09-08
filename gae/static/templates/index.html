@@ -14,19 +14,19 @@ Algae is an application template for Google App Engine
 <!-- tabbed content !-->
 <div class="tabbable"> 
   <ul id="tabs" class="nav nav-tabs">
-    <li class="active"> <a href="#users"><h3><i class="icon-user"></i> Users</h3></a></li>
-    <li><a href="#api"><h3><i class="icon-cogs"></i> RESTful APIs</h3></a></li>
-    <li><a href="#rpc"><h3><i class="icon-cogs"></i> RPC-style APIs</h3></a></li>
-    <li><a href="#security"><h3><i class="icon-lock"></i> Security</h3></a></li>
-    <li><a href="#css"><h3><i class="icon-tint"></i> CSS/LESS</h3></a></li>
-    <li><a href="#test"><h3><i class="icon-fire"></i> Testing</h3></a></li>
-    <li class="pull-right"><a href="#about"><h3>About</h3></a></li>
+    <li class="active"> <a href="#users"><h4><i class="icon-user"></i> Users</h4></a></li>
+    <li><a href="#api"><h4><i class="icon-cogs"></i> RESTful APIs</h4></a></li>
+    <li><a href="#rpc"><h4><i class="icon-cogs"></i> RPC-style APIs</h4></a></li>
+    <li><a href="#security"><h4><i class="icon-lock"></i> Security</h4></a></li>
+    <li><a href="#css"><h4><i class="icon-tint"></i> CSS/LESS</h4></a></li>
+    <li><a href="#test"><h4><i class="icon-fire"></i> Testing</h4></a></li>
+    <li class="pull-right"><a href="#about"><h4>About</h4></a></li>
   </ul>
   <div class="tab-content">
     <div class="tab-pane active row" id="users">
       <div class="span12">
 
-        <h3>Profiles</h3>
+        <h4>Profiles</h4>
         <blockquote>
         <code>gae/handlers/oauth.py</code> and <code>gae/handlers/email_auth.py</code> request handlers are responsible for processing OAuth and email user authentication. <br>
         <code>USER_ATTR</code> dictionary in <code>gae/handlers/oauth.py</code> defines how user fields map between different services (identity providers) and the app's internal user model. The rest is a lot of smart Python code you needn't worry about.
@@ -42,7 +42,7 @@ Algae is an application template for Google App Engine
             <li><a data-toggle="modal" href="#signup">Sign up</a> or <a data-toggle="modal" href="#signin">sign in</a> with email
           </ul>
         {% endif %}
-        <h3>Sessions</h3>
+        <h4>Sessions</h4>
         <blockquote>
         Sessions are tracked by encrypted, client-side cookies. <code>COOKIE_TEMPLATE</code> variable in <code>gae/settings.py</code> defines the cookie content, and <code>session</code> dictionary can be accessed in every request handler. 
         </blockquote>
@@ -61,7 +61,7 @@ Algae is an application template for Google App Engine
         The forms below are automatically generated from model definitions in <code>gae/code/model.py</code>. 
         <code>generate_model_form()</code> in <code>gae/code/model.py</code> converts the model to a dictionary of template variables, and <code>gae/static/templates/forms.html</code> macro generates the corresponding HTML.
         </blockquote>
-        <h3>Create Entity</h3>
+        <h4>Create Entity</h4>
         <blockquote>
         
 
@@ -72,7 +72,7 @@ Algae is an application template for Google App Engine
         </blockquote>
         {{ forms.form('create', 'Create', '', form) }}
         
-        <h3>Update/Delete Entity</h3>
+        <h4>Update/Delete Entity</h4>
         <blockquote>
         <div class="well">
           <span class="label label-info">Heads up!</span>
@@ -182,7 +182,7 @@ Algae is an application template for Google App Engine
     </div>
     <div class="tab-pane row" id="rpc">
       <div class="span12" >
-        <h3>Change Email Address</h3>
+        <h4>Change Email Address</h4>
         <blockquote>
         <div class="well">
           <span class="label label-info">Heads up!</span>
@@ -207,7 +207,7 @@ Algae is an application template for Google App Engine
           </fieldset>
         </form>
 
-        <h3>Add To Mailing List</h3>
+        <h4>Add To Mailing List</h4>
         <form id="signup_mailing_list_form" class="form-horizontal" name="signup_mailing_list">
           <fieldset>
             <div class="control-group">
@@ -233,7 +233,7 @@ Algae is an application template for Google App Engine
 <div class="tri-state modal hide" id="signup">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal">×</button>
-    <h3>Sign up with your email address</h3>
+    <h4>Sign up with your email address</h4>
   </div>
 
   <div class="modal-body">
@@ -274,7 +274,7 @@ Algae is an application template for Google App Engine
 <div class="tri-state modal hide" id="signin">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal">×</button>
-    <h3>Sign in</h3>
+    <h4>Sign in</h4>
   </div>
 
   <div class="modal-body">
